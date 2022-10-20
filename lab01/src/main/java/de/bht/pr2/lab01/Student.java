@@ -20,7 +20,10 @@ public class Student {
    *
    * @param dataRow a comma-separated row describing a student object
    */
-  public Student(String dataRow) {
+  public Student(String dataRow) throws StudentParseException {
+    if (dataRow == null) {
+      throw new StudentParseException("null");
+    }
     // TODO: Here goes your code ...
   }
 }
